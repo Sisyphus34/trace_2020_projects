@@ -1,0 +1,94 @@
+.Pokecard {
+    background-color: goldenrod;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    /* border: 1px solid white; */
+    width: 250px;
+    height: 350px;
+    text-align: left;
+    padding: 10px;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .Pokecard:hover {
+    box-shadow: 4.5px 9px 17px -10px whitesmoke;
+    transform: scale(1.075);
+} */
+
+.Pokecard-inlay {
+    color: black;
+    background-color: bisque;
+    border: 2px solid rgb(93, 74, 24);
+    height: 98%;
+    max-width: 100%;
+}
+
+.Pokecard-img {
+    border: 2px solid white;
+}
+
+.Pokecard-back{
+    background-image: url("https://cdn.bulbagarden.net/upload/1/17/Cardback.jpg");
+    background-size: cover;
+    border-radius: 15px;
+    width: 250px;
+    height: 350px;
+    text-align: left;
+    padding: 10px;
+    margin: 1rem;
+}
+
+.Pokecard-data{
+    text-align: center;
+}
+
+
+/* Flipping Animation */
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 250px;
+    height: 350px;
+    padding: 10px;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	/* position: relative; */
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute; 
+    top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}

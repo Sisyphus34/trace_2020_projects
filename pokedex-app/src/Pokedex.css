@@ -1,0 +1,19 @@
+.Pokedex-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.Pokedex{
+    background-image: url("https://free4kwallpapers.com/uploads/originals/2020/04/22/glazed-pokeball-planetx-wallpaper.png");
+    background-size: contain;
+    max-width: 100%;
+    max-height: auto;
+}
+.Pokedex h3 {
+    margin-left: .5rem;
+}
+
+
+.flip-container {
+	perspective: 1000px;
+}
