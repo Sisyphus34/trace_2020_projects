@@ -5,9 +5,9 @@
 }
 .Pokedex{
     background-image: url("https://free4kwallpapers.com/uploads/originals/2020/04/22/glazed-pokeball-planetx-wallpaper.png");
-    background-size: contain;
+    background-size: cover;
     max-width: 100%;
-    max-height: auto;
+    max-height: 100%;
 }
 .Pokedex h3 {
     margin-left: .5rem;
