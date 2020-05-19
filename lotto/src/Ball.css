@@ -1,0 +1,9 @@
+.Ball {
+    background-color: tomato;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+}
