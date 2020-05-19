@@ -6,4 +6,7 @@
     height: 60px;
     width: 60px;
     display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }

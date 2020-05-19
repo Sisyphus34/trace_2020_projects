@@ -1,0 +1,21 @@
+.Lottery{
+    display: flex;
+    flex-wrap: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Lottery-container{
+    width: 500px;
+    height: 200px;
+    border: 2px solid darkgray;
+    border-radius: 7px;
+    margin: 1em;
+}
+
+.section{
+    display: flex;
+    flex-wrap: column nowrap;
+    justify-content: center;
+    align-items: center;
+}

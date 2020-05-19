@@ -3,15 +3,14 @@ import './Ball.css'
 
 class Ball extends Component {
     static defaultProps = {
-        title: "Lotto",
-        numBalls: 6,
-        maxNum: 40,
+        num: 0
     }
-
     render() {
         return (
             <div className="Ball">
-                {this.props.num}
+                <p>
+                    {this.props.num}
+                </p>
             </div>
         )
     }
