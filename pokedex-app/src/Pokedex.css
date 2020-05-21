@@ -1,19 +1,53 @@
 .Pokedex-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.Pokedex{
-    background-image: url("https://free4kwallpapers.com/uploads/originals/2020/04/22/glazed-pokeball-planetx-wallpaper.png");
-    background-size: cover;
-    max-width: 100%;
-    max-height: 100%;
+.Pokedex {
+  background-size: cover;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
-.Pokedex h3 {
-    margin-left: .5rem;
+.Pokedex h1 {
+  color: goldenrod;
+  text-shadow: 1px 1px 1px white;
+  margin: 0;
+  font-size: 44px;
 }
 
+.Pokedex h2 {
+  margin-left: 0.5em;
+  text-shadow: 1px 1px 1px white;
+}
 
 .flip-container {
-	perspective: 1000px;
+  perspective: 1000px;
+}
+
+.Pokedex button {
+  width: 100px;
+  height: 100px;
+  color: rgb(255, 193, 36);
+  border: 1px solid black;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Pokeball.png");
+  background-size: cover;
+  background-position-x: -1px;
+  background-color: rgb(0, 6, 36);
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 2em;
+  opacity: 0.85;
+}
+
+.Pokedex button:hover {
+  color: rgb(255, 193, 36);
+  background-color: rgb(0, 6, 36) (243, 72, 72);
+  opacity: 1;
+}
+
+.Poke-btn {
+  margin-bottom: 20px;
 }

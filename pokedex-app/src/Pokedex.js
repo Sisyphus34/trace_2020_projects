@@ -1,38 +1,66 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import PokecardFront from "./Pokecard"
 
-import './Pokedex.css'
-
+import "./Pokedex.css"
 
 class Pokedex extends Component {
-    static defaultProps = {
-        pokemon: [
-            { id: 4, name: 'Charmander', type: 'fire', base_experience: 62 },
-            { id: 7, name: 'Squirtle', type: 'water', base_experience: 63 },
-            { id: 11, name: 'Metapod', type: 'bug', base_experience: 72 },
-            { id: 12, name: 'Butterfree', type: 'flying', base_experience: 178 },
-            { id: 25, name: 'Pikachu', type: 'electric', base_experience: 112 },
-            { id: 39, name: 'Jigglypuff', type: 'normal', base_experience: 95 },
-            { id: 94, name: 'Gengar', type: 'poison', base_experience: 225 },
-            { id: 133, name: 'Eevee', type: 'normal', base_experience: 65 }
-        ]
+  constructor(props) {
+    super(props)
+    this.retrievePokemon = this.retrievePokemon.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+    this.state = {
+      pokemon: [],
     }
-    render() {
-        return (
-            <div className="Pokedex" >
-                {/* <h1> Pokedex! </h1> */}
-                <div className="Pokedex-cards" > {
-                    this.props.pokemon.map((p) => (<PokecardFront
-                        id={p.id}
-                        name={p.name}
-                        type={p.type}
-                        exp={p.base_experience}
-                    />
-                    ))
-                } </div>
-            </div>
-        );
-    }
+  }
+  retrievePokemon() {
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=807&offset=0").then(
+      async (response) => {
+        let parsedData = await response.json()
+        // eslint-disable-next-line
+        parsedData.results.map(async (result, i) => {
+          result.id = i + 1
+
+          // Second fetch to url
+          let urlResponse = await fetch(result.url)
+          let obj = await urlResponse.json()
+          result.type = obj.types.map((t) => t.type.name + " ")
+          result.base_experience = obj.base_experience
+
+          this.setState((st) => ({
+            pokemon: [...st.pokemon, result],
+          }))
+        })
+      }
+    )
+  }
+  handleClick() {
+    this.retrievePokemon()
+  }
+  render() {
+    return (
+      <div className="Pokedex">
+        <h1> Gotta Catch 'Em All </h1>
+        <div>
+          <button onClick={this.handleClick}>
+            <div className="Poke-btn">Catch</div> Pokemon
+          </button>
+        </div>
+        <div className="Pokedex-cards">
+          {" "}
+          {this.state.pokemon.map((p) => {
+            return (
+              <PokecardFront
+                id={p.id}
+                name={p.name}
+                type={p.type}
+                exp={p.base_experience}
+              />
+            )
+          })}{" "}
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Pokedex
