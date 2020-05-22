@@ -1,0 +1,41 @@
+.Flipper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Flip-title {
+  margin: 1em;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.Flip-counter {
+  margin: 2em;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Flip-btn {
+  padding: 0.5em;
+  background-color: rgb(11,68,112);
+  border-radius: 20px;
+}
+.Flip-btn button {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  opacity: 0.8;
+  border: none;
+  color: rgb(11,68,112);
+  background-color: white(214,41,35);
+  font-size: larger;
+}
+
+.Flip-btn button:hover {
+  opacity: 1;
+  color: white;
+  background-color:rgb(11,68,112);
+  border: 5px solid rgb(214,41,35);
+}
