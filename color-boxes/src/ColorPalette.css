@@ -1,0 +1,7 @@
+.ColorPalette{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ColorPalette > * {
+    flex: 2 1 300px;
+}
