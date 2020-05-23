@@ -1,11 +1,12 @@
 import React, { Component } from "react"
 import "./Coin.css"
+import coinback from './coin-back.jpg'
 
 class CoinBack extends Component {
   render() {
     return (
       <div className="Coin-container">
-        <img src="https://tinyurl.com/react-coin-tails-jpg" alt="tails" />
+        <img src={coinback} alt="tails" />
       </div>
     )
   }

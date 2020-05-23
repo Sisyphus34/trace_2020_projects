@@ -4,12 +4,14 @@ import CoinFront from "./CoinFront"
 import CoinBack from "./CoinBack"
 import { choice } from "./helpers"
 import ReactCardFlip from "react-card-flip"
+import coinfront from './coin-front.jpg'
+import coinback from './coin-back.jpg'
 
 class Flipper extends Component {
   static defaultProps = {
     coins: [
-      { side: "heads", imgSrc: "https://tinyurl.com/react-coin-heads-jpg" },
-      { side: "tails", imgSrc: "https://tinyurl.com/react-coin-tails-jpg" },
+      { side: "heads", imgSrc: coinfront },
+      { side: "tails", imgSrc: coinback },
     ],
   }
   constructor(props) {
@@ -20,6 +22,7 @@ class Flipper extends Component {
       numFlips: 0,
       headCount: 0,
       tailCount: 0,
+      isFlipping: false
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -37,14 +40,20 @@ class Flipper extends Component {
         numFlips: st.numFlips + 1,
         headCount: st.headCount + (currCoin.side === "heads" ? 1 : 0),
         tailCount: st.tailCount + (currCoin.side === "tails" ? 1 : 0),
+        isFlipping: false
       }
 
     })
-    // console.log(this.state)
+  }
+  buttonDisable() {
+    this.setState({
+      isFlipping: true
+    })
   }
 
   handleClick(e) {
     e.preventDefault()
+    this.buttonDisable();
     setTimeout(async () => {
       clearInterval(flipPola)
       await this.flipCoin()
@@ -74,7 +83,9 @@ class Flipper extends Component {
         </ReactCardFlip>
 
         <div className="Flip-btn">
-          <button onClick={this.handleClick}>Flip Coin</button>
+          <button onClick={this.handleClick} disabled={this.state.isFlipping}>
+            {this.state.isFlipping ? "Flipping Coin..." : "Flip Coin"}
+          </button>
         </div>
         <div className="Flip-counter">
           Out of {this.state.numFlips} flips, there have been{" "}

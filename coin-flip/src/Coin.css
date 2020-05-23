@@ -1,5 +1,7 @@
 .Coin-container img {
-  margin: 1em;
-  width: 300px;
-  height: 300px;
+  /* margin: 1em; */
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
 }
+
