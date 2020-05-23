@@ -1,7 +1,10 @@
 .ColorPalette{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
 }
 .ColorPalette > * {
-    flex: 2 1 300px;
+    flex: 1 1 auto;
 }

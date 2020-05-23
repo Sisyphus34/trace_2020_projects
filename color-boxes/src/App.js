@@ -1,6 +1,6 @@
 import React from 'react';
+import ColorPalette from './ColorPalette';
 import './App.css';
-import ColorPalette from './ColorPalette'
 
 function App() {
   return (
