@@ -14,7 +14,7 @@ class WebPage extends Component {
                 {/* HEADER */}
                 <div className="header">
                     <h1>Courses</h1>
-                    <div>Search Bar</div>
+                    <div className="searchbar">Search</div>
                 </div>
 
                 {/* LOGO */}
@@ -34,7 +34,7 @@ class WebPage extends Component {
                 {/* TABS */}
                 <div className="tabs">
                     <h3>All</h3>
-                    <h3><span style={{ color: 'black' }}>Current</span></h3>
+                    <h3 style={{ color: 'black' }}><span>Current</span></h3>
                     <h3>Pending</h3>
                     <h3>Completed</h3>
                 </div>
@@ -51,10 +51,12 @@ class WebPage extends Component {
 
                 {/* ACCOUNT */}
                 <div className="account">
-                    <h3><i class="far fa-user"></i> Account</h3>
-
                     <div>
-                        <h3><i class="fas fa-cog"></i> Setting</h3>
+                        <h3><i className="far fa-user"></i> Account</h3>
+
+                    </div>
+                    <div>
+                        <h3><i className="fas fa-cog"></i> Setting</h3>
                     </div>
                 </div>
 

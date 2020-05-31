@@ -14,7 +14,7 @@
 .header {
   grid-area: h;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .header h1 {
@@ -29,6 +29,12 @@
   align-self: center;
 }
 
+.searchbar {
+  color: rgb(172, 172, 172);
+  grid-column: 6/-1;
+  margin-right: 4em;
+}
+
 .tabs {
   grid-area: t;
   display: grid;
@@ -36,7 +42,7 @@
   align-items: center;
 }
 
-.tabs h3{
+.tabs h3 {
   color: rgb(149, 149, 149);
 }
 
@@ -51,7 +57,7 @@
 .logo h2 {
   margin: 0;
   padding: 0;
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .side-menu {
@@ -75,14 +81,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
+  text-align: left;
 }
 
 .account h3 {
   color: rgb(149, 149, 149);
   font-size: 16px;
-  margin: 0;
+  margin: 3.5em;
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .content {
@@ -118,7 +126,8 @@
   justify-content: flex-start;
   align-items: center;
 }
-.row-three{
+
+.row-three {
   grid-area: r3;
   width: 100%;
   font-size: 14px;
@@ -144,4 +153,3 @@
   color: rgb(83, 83, 83);
   font-weight: bold;
 }
-
