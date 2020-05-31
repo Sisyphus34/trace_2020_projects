@@ -1,7 +1,7 @@
 Use react.js and css styling to mimic an image!
 
 ![Site Image](./src/img/recreate-site.png)
-![Go to deployed version](https://giant-offer.surge.sh)
+[Go to deployed version: Recreated Site](https://giant-offer.surge.sh)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
